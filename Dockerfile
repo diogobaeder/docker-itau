@@ -1,5 +1,10 @@
 FROM ubuntu:14.04
-RUN apt-get update && apt-get install -y firefox
+RUN apt-get update && apt-get install -y \
+    firefox \
+    openssl \
+    libcurl3 \
+    libnss3-tools
+
 
 RUN export uid=1000 gid=1000 && \
     mkdir -p /home/itau && \
